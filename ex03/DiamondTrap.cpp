@@ -31,8 +31,8 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& that)
 #endif
     if (this != &that)
     {
-        FragTrap::operator=(that);
-        ScavTrap::operator=(that);
+        this->FragTrap::operator=(that);
+        this->ScavTrap::operator=(that);
         const_cast<std::string&>(this->name) = that.name;
     }
     return *this;

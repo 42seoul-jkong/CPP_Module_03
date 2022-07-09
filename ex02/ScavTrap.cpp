@@ -30,7 +30,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& that)
 #endif
     if (this != &that)
     {
-        ClapTrap::operator=(that);
+        this->ClapTrap::operator=(that);
     }
     return *this;
 }
