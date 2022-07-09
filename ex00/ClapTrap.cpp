@@ -6,8 +6,8 @@
 
 #define VERBOSE
 
-ClapTrap::ClapTrap(const std::string& name)
-    : name(name), health(10), energy(0), damage(0)
+ClapTrap::ClapTrap(const std::string& name, int health, int energy, int damage)
+    : name(name), health(health), energy(energy), damage(damage)
 {
 #ifdef VERBOSE
     std::cout << "ClapTrap Default constructor called" << std::endl;

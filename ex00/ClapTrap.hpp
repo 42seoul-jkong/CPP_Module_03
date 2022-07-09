@@ -14,7 +14,7 @@ private:
     int damage;
 
 public:
-    ClapTrap(const std::string& name = "clap");
+    ClapTrap(const std::string& name = "clap", int health = 10, int energy = 10, int damage = 0);
     ClapTrap(const ClapTrap& that);
     ClapTrap& operator=(const ClapTrap& that);
     ~ClapTrap();
