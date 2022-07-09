@@ -9,13 +9,16 @@
 int main(int argc, char* argv[])
 {
     (void)&argc, (void)&argv;
+
     ClapTrap clap;
     clap.attack("VictimC");
+
     ScavTrap scav;
     scav.attack("VictimS");
-    scav.guardGate();
+
     FragTrap frag;
     frag.attack("VictimF");
     frag.highFivesGuys();
+
     return 0;
 }

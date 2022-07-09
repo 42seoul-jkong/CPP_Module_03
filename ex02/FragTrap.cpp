@@ -16,11 +16,12 @@ FragTrap::FragTrap(const std::string& name)
 }
 
 FragTrap::FragTrap(const FragTrap& that)
+    : ClapTrap(that)
 {
 #ifdef VERBOSE
     std::cout << "FragTrap Copy constructor called" << std::endl;
 #endif
-    *this = that;
+    // No-OP
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& that)

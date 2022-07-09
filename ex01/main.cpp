@@ -8,10 +8,17 @@
 int main(int argc, char* argv[])
 {
     (void)&argc, (void)&argv;
+
     ClapTrap clap;
     clap.attack("VictimC");
+    clap.takeDamage(3);
+    clap.beRepaired(2);
+
     ScavTrap scav;
     scav.attack("VictimS");
+    scav.takeDamage(7);
+    scav.beRepaired(5);
     scav.guardGate();
+
     return 0;
 }

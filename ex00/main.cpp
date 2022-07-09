@@ -7,7 +7,11 @@
 int main(int argc, char* argv[])
 {
     (void)&argc, (void)&argv;
+
     ClapTrap clap;
     clap.attack("Victim");
+    clap.takeDamage(1);
+    clap.beRepaired(1);
+
     return 0;
 }

@@ -16,11 +16,12 @@ ScavTrap::ScavTrap(const std::string& name)
 }
 
 ScavTrap::ScavTrap(const ScavTrap& that)
+    : ClapTrap(that)
 {
 #ifdef VERBOSE
     std::cout << "ScavTrap Copy constructor called" << std::endl;
 #endif
-    *this = that;
+    // No-OP
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& that)

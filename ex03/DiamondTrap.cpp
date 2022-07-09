@@ -17,11 +17,12 @@ DiamondTrap::DiamondTrap(const std::string& name)
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& that)
+    : ClapTrap(that), name(that.name)
 {
 #ifdef VERBOSE
     std::cout << "DiamondTrap Copy constructor called" << std::endl;
 #endif
-    *this = that;
+    // No-OP
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& that)
@@ -31,8 +32,7 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& that)
 #endif
     if (this != &that)
     {
-        this->FragTrap::operator=(that);
-        this->ScavTrap::operator=(that);
+        this->ClapTrap::operator=(that);
         const_cast<std::string&>(this->name) = that.name;
     }
     return *this;
